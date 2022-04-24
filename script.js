@@ -35,7 +35,7 @@ function animate() {
                     if (board[i][j] == 1 || board[i][j] == 2) {
                         circle(i*w+w/2, j*w+w/2, rad, "Gainsboro");
                         ctx.save();
-                        ctx.globalAlpha = 0.4;
+                        ctx.globalAlpha = 0.3;
                         circle(i*w+w/2, j*w+w/2, rad, board[i][j] == 1 ? "salmon" : "GoldenRod");
                         ctx.restore();
                     }
