@@ -9,9 +9,24 @@
     <script src="board.js"></script>
 </head>
 <body>
-    <div id="displayField" class="bg-white max-w-md w-full p-6 text-center">
+    <div id="displayField">
         <div>
             <h1 id="result"></h1>
+            <div id="tallies">
+                <div class="tally">
+                    <h3 style="color: salmon;">Red</h3>
+                    <span id="red">0</span>
+                </div>
+                <div class="tally">
+                    <h3 style="color: #008bba53;">Draws</h3>
+                    <span id="draws">0</span>
+                </div>
+                <div class="tally">
+                    <h3 style="color: GoldenRod;">Yellow</h3>
+                    <span id="yellow">0</span>
+                </div>
+            </div>
+            <br>
             <button onclick="startGame()">Play Again</button>
         </div>
     </div>

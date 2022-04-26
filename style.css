@@ -13,8 +13,9 @@ canvas {
 #displayField {
     background: rgba(255, 255, 255, 0.6);
     text-align: center;
-    width: 30%;
-    height: 18%;
+    width: 35%;
+    height: 30%;
+    font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
     position: absolute;
     text-align: center;
@@ -26,7 +27,7 @@ canvas {
 
 h1 {
     font-weight: 100; 
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 2%;
 }
 
 button {
@@ -35,7 +36,7 @@ button {
     font-size: medium;
     border: 2px solid #008bba53;
     border-radius: 16px;
-    width: 70%;
+    width: 65%;
     padding: 3%;
     transition-duration: 0.6s;
 }
@@ -43,4 +44,13 @@ button {
 button:hover {
     background: #008bba53;
     color: rgba(255, 255, 255, 0.6);
+}
+
+.tally {
+    text-align: center;
+    width: 50%;
+}
+
+#tallies {
+    display: flex;
 }

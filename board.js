@@ -30,13 +30,32 @@ function move(col) {
     chosenX = chosenCol*w+w/2;
     chosenY = w/2;
     velocity = 1;
-    animate();
+    if (heights[col] > 0) animate();
     board[col][heights[col]] = player;
+    if (heights[col] <= 0) {
+        drawBoard();
+        console.log(board);
+        let winner = checkWinner(board);
+        if (winner != null) handleWin(winner);
+    }
     heights[col]--;
     player = player == 1 ? 2 : 1;
 }
 
 function checkWinner(board) {
+    let draw = true;
+
+    for (let x = 0; x < cols; x++) {
+        for (let y = 0; y < rows; y++) {
+            if (board[x][y] == 0) {
+                draw = false;
+                break;
+            }
+        }
+    }
+
+    if (draw) return "draw";
+
     //vertical
     for(var x = 0; x<cols-3; x++) {
         for(var y = 0; y<rows; y++) {
